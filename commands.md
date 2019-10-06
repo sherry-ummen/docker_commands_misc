@@ -15,3 +15,6 @@ docker run -d --name redisHostPort -p 6379:6379 redis:latest
 
 # Inspect docker 
 docker inspect <fiendlyname/containerid>
+
+# Mapping driver with option -v hostdir:containerdir
+docker run -d --name redisMapped -v /opt/docker/data/redis:/data redis
