@@ -7,4 +7,11 @@ docker rmi $(docker images -a -q)
 # List all docker images
 docker images
 
+# Stop all containres
+docker stop $(docker ps -a -q)
 
+# Start container in background ( -d ) with name and port
+docker run -d --name redisHostPort -p 6379:6379 redis:latest
+
+# Inspect docker 
+docker inspect <fiendlyname/containerid>
